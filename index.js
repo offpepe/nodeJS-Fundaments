@@ -1,6 +1,3 @@
-const fs = require('fs');
+const readFileSimple = require('./exercices/try-fs');
 
-fs.readFile('./sheetData.txt', (err, content) => {
-    if(err) { console.error(`${err.message}`); return }
-    console.log(content.toString('utf8'));
-});
+readFileSimple('sheetData.txt');
