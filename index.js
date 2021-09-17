@@ -6,4 +6,4 @@ const stringConversor = require('./exercices/fs-stringConversor');
 // readFileSimple('sheetData.txt');
 // asyncRead('article.txt');
 // fsAsync('article.txt');
-stringConversor('converted.txt', 'article.txt', 'hex');
+stringConversor('./archives/converted.txt', './archives/article.txt', 'utf8');
