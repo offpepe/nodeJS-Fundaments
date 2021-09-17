@@ -2,13 +2,13 @@ const fs = require('fs').promises;
 
 const stringConversor = async (file, content, type) => {
     try {
-    const readedContent = await fs.readFile(content, 'utf-8');
-    const operation = await fs.writeFile(file, readedContent, type);
-    const operationResult = operation;
-    console.log(operationResult);
+    const readedContent = await fs.readFile(content, type);
+    const operation = await fs.writeFile(file, readedContent);
+    console.log(`Deu bom viu ^^
+    result: SUCCESS`);
     }
     catch (error) {
-        console.log(error);
+        console.log(`Deu ruim ein, saca só: ${error}`);
     }
 };
 
