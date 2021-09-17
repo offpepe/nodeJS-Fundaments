@@ -1,0 +1,2 @@
+{ name: 'alan', age: 22, college: 'software engenering', isStudying: 'node.JS'}
+
