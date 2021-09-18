@@ -1,9 +1,12 @@
-const readFileSimple = require('./exercices/try-fs');
-const asyncRead = require('./exercices/fs-tryCatch');
-const fsAsync = require('./exercices/fs-promise');
-const stringConversor = require('./exercices/fs-stringConversor');
+const express = require('express');
+const asyncRead = require('./exercices/fs-promise')
+const app = express();
 
-// readFileSimple('sheetData.txt');
-// asyncRead('article.txt');
-// fsAsync('article.txt');
-stringConversor('./archives/converted.txt', './archives/article.txt', 'utf8');
+
+const articleRead = async (req, res) => {
+    const article = await asyncRead('./archives/article.txt')
+    res.status(200).send(article);
+}
+app.get('/articleRead', articleRead);
+
+app.listen(3001, () => console.log('We are running and ready to roll on 3001'));

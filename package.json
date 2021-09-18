@@ -4,7 +4,7 @@
   "description": "module created to study node and npm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm test mocha",
     "lesgo": "node index.js"
   },
   "keywords": [
@@ -15,6 +15,7 @@
   "dependencies": {
     "chai": "^4.3.4",
     "dog-names": "^2.0.0",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
     "mocha": "^9.1.1"
   }
