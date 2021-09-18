@@ -17,4 +17,4 @@ app.get('/articleRead', articleRead);
 
 app.get('/data', readData)
 
-app.listen(3001, () => console.log('We are running and ready to roll on 3001'));
+app.listen(3000, () => console.log('We are running and ready to rock on 3000'));
