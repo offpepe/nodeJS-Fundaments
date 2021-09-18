@@ -1,20 +1,34 @@
 [
-    {"alan": { 
+    {   "name": "Alan", 
         "version": 22.1,
-        "works at": "Tahto",
+        "worksAt": "Tahto",
         "studying": "software engenering",
-        "looking for": "work on my developer career"
-     }},
-     { "jaqueline": {
+        "lookingFor": "work on my developer career"
+     },
+     {   "name": "Jaqueline",
          "version": 19.3,
-         "works at": null,
+         "worksAt": "none",
          "studying": "pedagogy",
-         "looking for": "psychologic stablish, work and start a family"
-     } },
-     { "khris": {
+         "lookingFor": "psychologic stablish, work and start a family"
+     },
+     {   "name": "Khris",
          "version": "21.?",
-         "works at": "Fini",
-         "studying": null,
-         "looking for": "nobody knows"
-     } }
+         "worksAt": "Fini",
+         "studying": "none",
+         "lookingFor": "nobody knows"
+     },
+     {
+         "name": "Tetsuya",
+         "version": "22.9",
+         "worksAt": "FAAB",
+         "studying": "System of information",
+         "lookingFor": "success on twitch and real happyness"
+     },
+     {
+         "name": "Denis",
+         "version": "22.1",
+         "worksAt": "Tahto",
+         "studying": "none",
+         "lookingFor": "nobody knows"
+     }
 ]

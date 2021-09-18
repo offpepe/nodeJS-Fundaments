@@ -2,7 +2,7 @@ const express = require('express');
 const asyncRead = require('./exercices/fs-promise');
 const fsRD = require('./exercices/fs-data');
 const app = express();
-
+const cors = require('cors');
 
 const articleRead = async (_req, res) => {
     const article = await asyncRead('./archives/article.txt')
@@ -13,6 +13,9 @@ const readData = async (_req, res) => {
     const data = await fsRD('./archives/data.json');
     res.status(200).send(data);
 }
+
+app.use(cors());    
+
 app.get('/articleRead', articleRead);
 
 app.get('/data', readData)
