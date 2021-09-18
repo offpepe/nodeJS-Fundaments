@@ -45,6 +45,13 @@ app.post('/pokemons/:pokemon', (req, res) => {
     const { pokemon } = req.params
     pokemons.push(pokemon);
     res.status(200).send(`${pokemon} adicionado com sucesso ^^`);
-} )
+} );
+
+app.get('/pokemons/search', (req, res) => {
+    const { id, name, type } = req.query;
+    const result = pokemons.filter((poke) => (poke.id === Number(id)) || (poke.name.english === name) || poke.type.some((t) => t  === type));
+    if(result) { res.status(200).send(result) }
+    else { res.status(404).send('Any poke founded w/ this params') }
+})
 
 app.listen(3000, () => console.log('We are running and ready to rock on 3000'));
