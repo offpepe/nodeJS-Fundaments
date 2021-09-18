@@ -1,9 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const asyncRead = require('./exercices/fs-promise');
 const fsRD = require('./exercices/fs-data');
 const stringConversor = require('./exercices/fs-stringConversor');
 const app = express();
 const cors = require('cors');
+const { pokemons } = require('./archives/pokedex');
+
+app.use(bodyParser.json())
 
 const articleRead = async (_req, res) => {
     const article = await asyncRead('./archives/article.txt')
@@ -30,6 +34,17 @@ app.use(cors());
 app.get('/articleRead', articleRead);
 
 app.get('/data', readData);
+
 app.get('/convert/:type/:input', convertTo64);
+
+app.get('/pokemons', (_req, res) => {
+    res.status(200).send(pokemons);
+});
+
+app.post('/pokemons/:pokemon', (req, res) => {
+    const { pokemon } = req.params
+    pokemons.push(pokemon);
+    res.status(200).send(`${pokemon} adicionado com sucesso ^^`);
+} )
 
 app.listen(3000, () => console.log('We are running and ready to rock on 3000'));
