@@ -1,0 +1,20 @@
+[
+    {"alan": { 
+        "version": 22.1,
+        "works at": "Tahto",
+        "studying": "software engenering",
+        "looking for": "work on my developer career",
+     }},
+     { "jaqueline": {
+         "version": 19.3,
+         "works at": null,
+         "studying": "pedagogy",
+         "looking for": "psychologic stablish, work and start a family"
+     } },
+     { "khris": {
+         "version": "21.?",
+         "works at": "Fini",
+         "studying": null,
+         "looking for": "nobody knows"
+     } }
+]
