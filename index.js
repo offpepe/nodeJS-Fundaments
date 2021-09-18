@@ -3,7 +3,7 @@ const asyncRead = require('./exercices/fs-promise')
 const app = express();
 
 
-const articleRead = async (req, res) => {
+const articleRead = async (_req, res) => {
     const article = await asyncRead('./archives/article.txt')
     res.status(200).send(article);
 }
